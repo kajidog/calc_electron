@@ -1,4 +1,4 @@
-import { app, BrowserWindow, Menu, Tray } from "electron";
+import { app, BrowserWindow, clipboard, ipcMain, Tray } from "electron";
 import path from "node:path";
 
 process.env.DIST = path.join(__dirname, "../dist");
@@ -17,15 +17,16 @@ const VITE_DEV_SERVER_URL = process.env["VITE_DEV_SERVER_URL"];
 function createWindow() {
   win = new BrowserWindow({
     width: 300,
-    height: 450,
-    show: false,
-    frame: false,
+    height: 425,
+    show: true,
+    frame: true,
     fullscreenable: false,
     resizable: false,
-    transparent: true,
     alwaysOnTop: true,
     webPreferences: {
       backgroundThrottling: false,
+      preload: path.join(__dirname, "preload.js"),
+      contextIsolation: true,
     },
   });
 
@@ -84,3 +85,8 @@ const getWindowPosition = () => {
 
   return { x: x, y: y };
 };
+
+ipcMain.handle("use_clipboard", async (_, text) => {
+  const data = clipboard.writeText(text);
+  return data;
+});
