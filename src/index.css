@@ -75,6 +75,11 @@ button:focus-visible {
 
 *{
   box-sizing: border-box;
+  
+}
+
+*::-webkit-scrollbar{
+  display: none;
 }
 
 .event_none {

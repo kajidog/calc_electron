@@ -5,9 +5,7 @@ process.env.DIST = path.join(__dirname, "../dist");
 process.env.PUBLIC = app.isPackaged
   ? process.env.DIST
   : path.join(process.env.DIST, "../public");
-const iconPath = path.join(process.env.PUBLIC, "electron-original.png");
-console.log(iconPath);
-
+const iconPath = path.join(process.env.PUBLIC, "calculator-outline.png");
 let win: BrowserWindow | null;
 let tray: Tray | null;
 
@@ -16,8 +14,8 @@ const VITE_DEV_SERVER_URL = process.env["VITE_DEV_SERVER_URL"];
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 300,
-    height: 425,
+    width: 320,
+    height: 450,
     show: true,
     frame: true,
     fullscreenable: false,
@@ -50,6 +48,7 @@ function createWindow() {
 
 app.on("window-all-closed", () => {
   win = null;
+  app.quit();
 });
 
 app.whenReady().then(createWindow);
