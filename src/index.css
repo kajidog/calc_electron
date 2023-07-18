@@ -48,7 +48,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   fill: #fff;
   color: #fff;
 }
@@ -73,12 +73,11 @@ button:focus-visible {
   }
 }
 
-*{
+* {
   box-sizing: border-box;
-  
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   display: none;
 }
 

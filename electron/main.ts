@@ -78,7 +78,7 @@ const getWindowPosition = () => {
 
   // 中央に配置
   const x = Math.round(
-    trayBounds.x + trayBounds.width / 2 - windowBounds.width / 2
+    trayBounds.x + trayBounds.width / 2 - windowBounds.width / 2,
   );
   const y = Math.round(trayBounds.y + trayBounds.height);
 

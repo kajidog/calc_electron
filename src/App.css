@@ -1,23 +1,22 @@
 #root {
   width: 100vw;
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-
 .calc span {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 3.75rem;
   height: 3.75rem;
   user-select: none;
-  transition: .2s;
+  transition: 0.2s;
   text-align: center;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
 }
 
-.calc .tr{
+.calc .tr {
   display: flex;
 }
 
@@ -30,30 +29,28 @@
   margin: 0 auto;
 }
 
-.calc .selected{
+.calc .selected {
   background-color: #646cff;
 }
 
 .calc_display {
   font-size: 1.1rem;
   font-weight: bold;
-  padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
   background-color: #ffffff0a;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   text-align: end;
 }
 
-
 .copy {
-  padding: .25rem;
+  padding: 0.25rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
 }
 .copied {
   background-color: #ffffff0a;
-  margin-left: .5rem;
-  padding: .25rem;
-  font-size: .75rem;
+  margin-left: 0.5rem;
+  padding: 0.25rem;
+  font-size: 0.75rem;
 }
