@@ -9,6 +9,12 @@ react
 electron  
 typescript  
 
+## インストーラー
+
+Windows/MacOS対応  
+https://github.com/kajidog/calc_electron/releases/tag/0.0.0
+
+
 ## 開発方法
 
 ```bash
