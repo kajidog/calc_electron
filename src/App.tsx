@@ -114,12 +114,11 @@ function App() {
         <div className="copy">
           {clipped && <div className="copied">コピーしました</div>}
           <button onClick={copyToClipboard}>
-            {" "}
-            <img src={clipboardIcon} alt="" />{" "}
+            <img src={clipboardIcon} alt="" />
           </button>
         </div>
         <div className="calc_display">
-          {formatNumberWithComma(value || sum || "0")}{" "}
+          {formatNumberWithComma(value || sum || "0")}
         </div>
         {mapTr}
       </div>
