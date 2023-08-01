@@ -18,6 +18,8 @@ https://github.com/kajidog/calc_electron/releases/tag/0.0.0
 ## 開発方法
 
 ```bash
+git clone https://github.com/kajidog/calc_electron.git
+cd calc_electron
 npm i
 npm run dev
 ```
